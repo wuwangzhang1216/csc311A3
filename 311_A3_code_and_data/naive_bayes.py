@@ -157,7 +157,7 @@ def main():
     theta_map, pi_map = train_map_estimator(train_images, train_labels)
 
     # Find the log likelihood of each data point
-    loglike_train_mle = log_likelihood(train_images, theta_mle, pi_mle)
+    loglike_train_mle = (train_images, theta_mle, pi_mle)
     loglike_train_map = log_likelihood(train_images, theta_map, pi_map)
 
     avg_loglike_mle = np.sum(loglike_train_mle * train_labels) / N_data
